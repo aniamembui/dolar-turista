@@ -1,0 +1,4 @@
+####
+# https://mediatemple.net/community/products/all/204643080/how-do-i-redirect-my-site-using-a-.htaccess-file
+# Provide Specific Index Page (Set the default handler)
+DirectoryIndex dolar.php
