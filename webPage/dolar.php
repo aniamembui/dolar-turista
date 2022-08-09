@@ -32,6 +32,20 @@
   <br>
   <br>
   <br>
+<div class="container-fluid" >
+    <nav class="main-nav js-stick" style="height: 10%">
+                <div class="full-wrapper relative clearfix">
+                    <!-- Logo ( * your text or image into link tag *) -->
+                    <div class="nav-logo-wrap local-scroll">
+                        <a href="/" class="logo">
+                            <img class="mx-auto d-block w-50 h-50 pb-5" src="../images/logo.png" alt="logo"  style="height:100px ; width:100px" >
+                        </a>
+                    </div>
+		</div>
+    </nav>
+</div>
+
+
   <div class="container">
     <div class="row justify-content-center">
       <h1 class="text-center display-3" ><strong>Calculadora de Dólar turista</strong></h1>
@@ -55,14 +69,14 @@
         <div class="row">
           <div class="resultado col-md4">
 
-          <span class="col-lg-6 p-3 bg-secondary container d-flex align-items-center justify-content-center align-self-center my-3 resultado" v-if="selected" >El precio de venta del Dólar en el Banco {{ selected.banco }} es {{selected.sell}}:
-            y con el 75% de impuestos {{parseFloat(selected.sell)  * 1.75}}</span>
+          <span class="fs-5 col-lg-6 p-3 bg-secondary container d-flex align-items-center justify-content-center align-self-center my-3 resultado" v-if="selected" >El precio de venta del Dólar en el Banco {{ selected.banco }} es {{selected.sell}} :
+            y con el 75% de impuestos {{ (parseFloat(selected.sell)  * 1.75 ).toFixed(2)}}</span>
           </div>
           <div class="w-100"></div>  
 	    <div>	  
-		<div class="col-lg-6 container d-flex align-items-center justify-content-center align-self-center bg-secondary resultado">
+		<div class="fs-5 col-lg-6 container d-flex align-items-center justify-content-center align-self-center bg-secondary resultado">
 		    <span class="p-3" v-if="dinero">Con el Dólar a {{selected.sell}}: y con el 75% de impuestos, el importe
-		    total por {{ dinero }} dólares consumidos es de {{parseFloat(selected.sell)  * 1.75 * dinero}} pesos</span>
+		    total por {{ dinero }} dólares consumidos es de {{ (parseFloat(selected.sell)  * 1.75 * dinero ).toFixed(2)}} pesos</span>
 		  </div>
             </div>
         </div>
